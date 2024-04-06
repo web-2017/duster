@@ -1,18 +1,18 @@
-import React, { Fragment} from "react";
-import Navbar from '../../components/Navbar/Navbar';
+import React, { Fragment } from "react";
+import Navbar from "../../components/Navbar/Navbar";
 import PageTitle from "../../components/pagetitle/PageTitle";
 import Scrollbar from "../../components/scrollbar/scrollbar";
 import { Button, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import {totalPrice} from "../../utils";
+import { totalPrice } from "../../utils";
 import {
   removeFromCart,
   incrementQuantity,
   decrementQuantity,
 } from "../../store/actions/action";
 import Footer from "../../components/footer/Footer";
-import Logo from '../../images/logo-2.png'
+import Logo from "../../assets/logo-2.png";
 
 const CartPage = (props) => {
   const ClickHandler = () => {
@@ -23,7 +23,7 @@ const CartPage = (props) => {
 
   return (
     <Fragment>
-      <Navbar hclass={'header-style-3'} Logo={Logo} />
+      <Navbar hclass={"header-style-3"} Logo={Logo} />
       <PageTitle pageTitle={"Cart"} pagesub={"Cart"} />
       <div className="cart-area section-padding">
         <div className="container">
@@ -83,8 +83,12 @@ const CartPage = (props) => {
                                   </Grid>
                                 </div>
                               </td>
-                              <td className="ptice">${catItem.qty * catItem.price}</td>
-                              <td className="stock">${catItem.qty * catItem.price}</td>
+                              <td className="ptice">
+                                ${catItem.qty * catItem.price}
+                              </td>
+                              <td className="stock">
+                                ${catItem.qty * catItem.price}
+                              </td>
                               <td className="action">
                                 <ul>
                                   <li
