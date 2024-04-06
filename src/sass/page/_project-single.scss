@@ -1,0 +1,267 @@
+/*--------------------------------------------------------------
+	#portfolio single page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#7.1	portfolio-sigle-section
+--------------------------------------------------------------*/
+.portfolio-sigle-section {
+	.project-single-img-holder {
+		overflow: hidden;
+		margin: 0 -15px;
+
+		@include media-query(767px) {
+			margin: 0 -7.5px;
+		}
+
+		img {
+			width: calc(50% - 30px);
+			float: left;
+			margin: 0 15px;
+
+			@include media-query(767px) {
+				width: calc(50% - 15px);
+				margin: 0 7.5px;
+			}
+		}
+	}
+
+	.project-info {
+		background-color: #e9f2fb;
+		width: 340px;
+		padding: 25px 45px 35px;
+		float: right;
+		margin-top: 15px;
+
+		@include media-query(991px) {
+			width: auto;
+			max-width: 300px;
+			float: none;
+			margin: 0;
+			padding: 25px;
+		}
+
+		h3 {
+			font-size: 22px;
+			font-weight: bold;
+			margin-bottom: 1.3em;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		ul > li:last-child {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+
+		li {
+			font-size: 14px;
+			margin-bottom: 7px;
+			padding-bottom: 7px;
+		}
+
+		li span {
+			font-weight: 600;
+			color: #333;
+			min-width: 100px;
+			display: inline-block;
+		}
+	}
+
+	.project-details {
+		width: calc(100% - 400px);
+		float: left;
+
+		@include media-query(991px) {
+			width: 100%;
+			float: none;
+			margin-top: 70px;
+		}
+	}
+
+	.content-area {
+		padding-top: 70px;
+
+		@include media-query(767px) {
+			padding-top: 50px;
+		}
+	}
+
+	.content-area h2 {
+		font-size: 35px;
+		font-weight: bold;
+		margin: 0 0 0.8em;
+
+		@include media-query(991px) {
+			font-size: 28px;
+		}
+
+		@include media-query(767px) {
+			font-size: 25px;
+		}
+	}
+
+	.content-area p {
+		margin-bottom: 1.7em;
+	}
+
+	.challange-solution-section {
+		margin-top: 70px;
+		clear: both;
+		float: none;
+
+		@include media-query(991px) {
+			margin-top: 30px;
+		}
+
+		.tablinks {
+
+			li {
+				display: inline-block;
+			}
+
+			a {
+				font-size: 16px;
+				font-weight: 600;
+				color: $heading-color;
+				padding: 10px 25px 8px;
+				display: block;
+				border: 1px solid #c8defc;
+
+				@include media-query(991px) {
+					font-size: 15px;
+				}
+
+				@include media-query(767px) {
+					font-size: 13px;
+					padding: 8px 15px 6px;
+				}
+			}
+
+			li.active a {
+				background: $theme-primary-color;
+				color: $white;
+				border-color: #e9f2fb
+			}
+
+			a:active,
+			a:focus {
+				text-decoration: none;
+			}
+		}
+
+		.tab-content {
+			padding: 40px;
+			border: 1px solid #c8defc;
+			margin-top: -1px;
+
+			p {
+				margin-bottom: 1.4em;
+			}
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.prev-next-project {
+		background-color: #f3f8ff;
+		padding: 28px 22px;
+		margin-top: 80px;
+		overflow: hidden;
+
+		@include media-query(767px) {
+			text-align: center;
+			padding: 35px 22px;
+		}
+
+		& > div {
+			display: inline-block;
+			position: relative;
+			padding-left: 75px;
+
+			@include media-query(767px) {
+				display: block;
+				float: none;
+				padding: 0;
+			}
+		}
+
+		& > div:first-child {
+			float: left;
+
+			@include media-query(767px) {
+				display: block;
+				float: none;
+				margin-bottom: 25px;
+			}
+		}
+
+		& > div:last-child {
+			float: right;
+			padding: 0 75px 0 0;
+
+			@include media-query(767px) {
+				display: block;
+				float: none;
+				padding: 0;
+			}
+		}
+
+		.icon {
+			position: absolute;
+			left: 0;
+			top: 5px;
+			border-right: 1px solid #e8e8e8;
+			padding-right: 18px;
+
+			@include media-query(767px) {
+				display: none;
+			}
+
+			i {
+				font-size: 30px;
+				color: $theme-primary-color;
+			}
+		}
+
+		& > div:last-child .icon {
+			left: auto;
+			right: 0;
+			border-left: 1px solid #e8e8e8;
+			padding-left: 18px;
+			border-right: 0;
+			padding-right: 0;
+		}
+
+		a {
+			display: block;
+		}
+
+		a > span {
+			font-size: 12px;
+			color: #7b7b7b;
+			text-transform: uppercase;
+		}
+
+		a > h5 {
+			font-size: 16px;
+			font-weight: bold;
+			color: $heading-color;
+			margin: 0.5em 0 0;
+			@include transition-time(0.2s);
+
+			@include media-query(767px) {
+				font-size: 16px;
+				margin: 0.1em 0 0;
+			}
+		}
+
+		a:hover h5 {
+			color: $theme-primary-color;
+		}
+	}
+}

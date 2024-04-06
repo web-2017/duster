@@ -1,0 +1,72 @@
+.theme-btn {
+	background-color: $theme-secondary-color;
+	display: inline-block;
+	color: $heading-color;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 12px 28px;
+	border: 0;
+	border-radius: 55px;
+	text-transform: capitalize;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($theme-primary-color, 5%);
+		color: $white;
+		text-decoration: none;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		padding: 10px 22px;
+	}
+}
+
+.theme-btn-s2 {
+	background-color: $theme-secondary-color;
+	display: inline-block;
+	color: $heading-color;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 15px 28px;
+	border: 0;
+	border-radius: 55px;
+	text-transform: capitalize;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($theme-primary-color, 5%);
+		color: $white;
+		text-decoration: none;
+	}
+
+	@include media-query(991px) {
+		font-size: 14px;
+		padding: 12px 22px;
+	}
+}
+
+.theme-btn-s3 {
+	@extend .theme-btn-s2;
+	background-color: $white;
+	border: 2px solid $theme-primary-color;
+	padding: 13px 28px;
+
+	@include media-query(991px) {
+		font-size: 14px;
+		padding: 10px 22px;
+	}
+}
+
+.theme-btn-s4 {
+	@extend .theme-btn-s3;
+	border-color: #dae9fd;
+
+	&:hover {
+		background-color: $theme-secondary-color;
+		border-color: $theme-secondary-color;
+		color: $heading-color;
+	}
+}

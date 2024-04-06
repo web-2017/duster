@@ -1,0 +1,173 @@
+/*--------------------------------------
+	service single sidebar
+----------------------------------------*/
+.service-sidebar {
+	@include media-query(991px) {
+		max-width: 300px;
+		margin-top: 80px;
+	}
+	> .widget + .widget {
+		margin-top: 60px;
+	}
+
+	/*** service-list-widget ***/
+	.service-list-widget {
+		ul {
+			list-style: none;
+			border-bottom: 0;
+		}
+
+		ul li {
+			border-bottom: 1px solid #e5f0fe;
+		}
+
+		ul > li:last-child {
+			border-bottom: 0;
+		}
+
+		a {
+			font-size: 14px;
+			background: #f6faff;
+			font-weight: 600;
+			display: block;
+			color: $text-color;
+			padding: 15px 24px;
+			position: relative;
+
+			&:before {
+				font-family: "Themify";
+				content: "\e649";
+				font-size: 12px;
+				position: absolute;
+				right: 20px;
+				top: 17px;
+			}
+		}
+
+		a:hover,
+		.current a {
+			background-color: $theme-primary-color;
+			color: $white;
+
+			&:before {
+				opacity: 1;
+			}
+		}
+	}
+
+
+	/*** download-widget ***/
+	.download-widget {
+		ul {
+			list-style: none;
+		}
+
+		ul > li + li {
+			margin-top: 5px;
+		}
+
+		ul a {
+			background: $theme-primary-color;
+			color: $white;
+			padding: 18px 25px;
+			font-weight: 500;
+			display: block;
+		}
+
+		ul i {
+			display: inline-block;
+			padding-right: 10px;
+			color: $white;
+		}
+
+		ul a:hover {
+			background: darken($theme-primary-color, 10%);
+		}
+	}
+
+	/*** contact-widget ***/
+	.contact-widget {
+		@include background-style("../../images/service-contact-widget-bg.jpg", center center, cover, no-repeat, local);
+		background-color: $theme-primary-color;
+		padding: 45px 40px;
+		position: relative;
+		text-align: center;
+
+		&:before {
+			content: "";
+			@include overlay(transparentize($theme-primary-color, 0.2));
+		}
+
+		> div {
+			position: relative;
+			z-index: 1;
+		}
+
+		h5 {
+			font-size: 16px;
+			font-weight: 500;
+			color: $white;
+			margin: 1em 0;
+			text-transform: capitalize;
+
+			span {
+				font-size: 36px;
+				font-weight: bold;
+				display: block;
+				margin-top: 0.5em;
+			}
+		}
+
+
+		a {
+			background-color: $theme-secondary-color;
+			font-size: 14px;
+			font-weight: 600;
+			color: $heading-color;
+			padding: 10px 15px;
+			display: inline-block;
+			margin-top: 25px;
+			border-radius: 50px;
+		}
+
+		a:hover {
+			color: $theme-primary-color;
+		}
+	}
+
+
+	/*** service-features-widget ***/
+	.service-features-widget {
+		padding: 45px 30px;
+		position: relative;
+		border: 2px solid #f7f7f7;
+
+		&:before {
+			font-family: "Themify";
+			content: "\e61f";
+			font-size: 25px;
+			color: $theme-primary-color;
+			position: absolute;
+			right: 30px;
+			top: 40px;
+			opacity: 0.5;
+		}
+
+		h3 {
+			font-size: 18px;
+			
+			margin: 0 0 0.8em;
+			text-transform: capitalize;
+		}	
+
+		ol {
+			list-style-position: inside;
+			padding-left: 0;
+			margin: 0;
+		}	
+
+		ol > li + li {
+			margin-top: 8px;
+		}
+	}
+}
